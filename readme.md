@@ -14,6 +14,6 @@ Python app.py
 ```
 
 If running from the same place as downloaded run the command:
-```Python
+```Powershell
 cd .\myStore; python app.py
 ```
