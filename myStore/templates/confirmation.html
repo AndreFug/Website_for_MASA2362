@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Order Confirmation</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Thank You for Your Order!</h1>
+    </header>
+
+    <div class="container confirmation">
+        <p>Your order has been placed successfully.</p>
+        <p><strong>Variable output to Python script:</strong> {{ variable }}</p>
+        <p><a href="{{ url_for('index') }}" class="btn">Back to Store</a></p>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2024 IKEA 4.0</p>
+    </footer>
+</body>
+</html>

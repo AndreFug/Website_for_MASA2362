@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>IKEA 4.0</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Order your <i>Hylle</i> here!</h1>
+    </header>
+
+    <div class="container">
+        <h2><i>Hylle</i> varianter</h2>
+        <div class="items-list">
+            {% for item in items %}
+                <div class="item">
+                    <img src="{{ url_for('static', filename='figure/' + item.image) }}" alt="{{ item.name }}">
+                    <h3>{{ item.name }}</h3>
+                    <p>Størrelse: {{ item.Size }}</p>
+                    <p>Pris: NOK {{ item.price }}</p>
+                    <a href="{{ url_for('add_to_cart', item_id=item.id) }}">Add to Cart</a>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2024 IKEA 4.0</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Your Shopping Cart</h1>
+    </header>
+
+    <div class="container cart">
+        {% if item %}
+            <img src="{{ url_for('static', filename='figure/' + item.image) }}" alt="{{ item.name }}" style="max-width: 200px;">
+            <h2>{{ item.name }}</h2>
+            <p>Size: {{ item.Size }}</p>
+            <p>Price:NOK  {{ item.price }}</p>
+            <form action="{{ url_for('checkout') }}" method="post">
+                <input type="hidden" name="item_Size" value="{{ item.Size }}">
+                <button type="submit" class="btn">Place Order</button>
+            </form>
+        {% else %}
+            <p>Your cart is empty.</p>
+        {% endif %}
+        <p><a href="{{ url_for('index') }}">Continue Shopping</a></p>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2024 IKEA 4.0</p>
+    </footer>
+</body>
+</html>

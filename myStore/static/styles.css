@@ -1,0 +1,129 @@
+/* styles.css */
+
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+header {
+    background-color: #35424a;
+    color: #ffffff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+/* Container */
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+/* Navigation */
+nav {
+    background: #35424a;
+    color: #ffffff;
+    padding: 15px;
+}
+
+nav a {
+    color: #ffffff;
+    margin: 0 15px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Items List */
+.items-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.item {
+    background: #ffffff;
+    border: 1px solid #cccccc;
+    width: 30%;
+    margin-bottom: 20px;
+    text-align: center;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+.item h3 {
+    margin-top: 0;
+}
+
+.item p {
+    color: #555555;
+}
+
+.item a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 15px;
+    background: #5cb85c;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.item a:hover {
+    background: #4cae4c;
+}
+
+/* Cart and Confirmation Pages */
+.cart, .confirmation {
+    background: #ffffff;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.cart h2, .confirmation h2 {
+    margin-top: 0;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #5bc0de;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: #31b0d5;
+}
+
+.footer {
+    background: #35424a;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+}
+
+.item img {
+    max-width: 100%;  /* Ensures the image fits the container width */
+    height: auto;     /* Maintains aspect ratio */
+    display: block;   /* Removes inline spacing issues */
+    margin: 0 auto;   /* Centers the image within the item container */
+    object-fit: cover; /* Ensures the image covers the defined dimensions without distortion */
+    width: 200px;     /* Fixed width for consistency */
+    height: 200px;    /* Fixed height for consistency */
+    border-radius: 10px; /* Optional: Adds rounded corners to images */
+}
