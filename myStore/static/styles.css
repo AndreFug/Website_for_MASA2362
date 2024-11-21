@@ -73,14 +73,14 @@ nav a:hover {
     display: inline-block;
     margin-top: 10px;
     padding: 10px 15px;
-    background: #5cb85c;
+    background: #4cae4c;
     color: #ffffff;
     text-decoration: none;
     border-radius: 5px;
 }
 
 .item a:hover {
-    background: #4cae4c;
+    background: #406962;
 }
 
 /* Cart and Confirmation Pages */
